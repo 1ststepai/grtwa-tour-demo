@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Tuition & Affordability · Gottesman RTW Academy (Demo concept)</title><meta name="description" content="Estimate your family cost with the TuitionMAX 14% of AGI cap.">
+<meta name="theme-color" content="#1d2b5c"><link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css"></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="banner">Demo concept · not the official school website · sample data is labeled · nothing is booked, charged, or sent</div>
+<header class="top"><div class="w"><a class="logo" href="index.html" aria-label="Gottesman RTW Academy home"><img src="img/logo.png" alt="Gottesman RTW Academy" width="161" height="50"></a>
+<button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+<nav class="main" id="nav" aria-label="Main"><a href="index.html">Home</a><a href="programs.html">Programs</a><a href="tuition.html" aria-current=page>Tuition</a><a href="give.html">Give & Pay</a><a href="parents.html">Parents</a><a href="about.html">About</a><a href="contact.html">Contact</a><a class="cta" href="visit.html">Book a Tour</a></nav></div></header>
+<main id="main"><div class="phero"><img src="img/admissions.jpg" alt="" ><div class="w"><span class="eb">Tuition &amp; Affordability</span><h1>Every Jewish child deserves the gift of a day school education.</h1><p>Through TuitionMAX, families on assistance will never pay more than 14% of their adjusted gross income toward K–8 tuition, no matter how many children are enrolled.</p></div></div>
+<section><div class="w g2" style="align-items:start">
+<div class="card rv" style="padding:30px;box-shadow:var(--sh)"><span class="eb">TuitionMAX estimator</span><h2 style="font-size:30px">What might my family pay?</h2>
+<span class="sample">Sample tuition placeholder: the school would enter its published rates</span>
+<form id="est" oninput="calc()" onsubmit="return false">
+<label for="agi">Household adjusted gross income (AGI)</label><input id="agi" type="number" inputmode="numeric" min="0" step="1000" value="150000">
+<div class="row2"><div><label for="kids">Children in K–8</label><select id="kids"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option></select></div>
+<div><label for="ecc">ECC siblings</label><select id="ecc"><option selected>0</option><option>1</option><option>2</option></select></div></div>
+<div class="row2"><div><label for="tk8">K–8 tuition per child <span class="sample" style="padding:1px 7px;font-size:11px">SAMPLE</span></label><input id="tk8" type="number" step="500" value="20000"></div>
+<div><label for="tecc">ECC tuition per child <span class="sample" style="padding:1px 7px;font-size:11px">SAMPLE</span></label><input id="tecc" type="number" step="500" value="15000"></div></div></form>
+<div style="background:#fff6f0;border-radius:18px;padding:20px;margin-top:20px">
+<div style="display:flex;justify-content:space-between"><span>Sample full tuition</span><b id="full">–</b></div>
+<div style="display:flex;justify-content:space-between;margin-top:6px"><span>14% of AGI cap</span><b id="cap">–</b></div>
+<div style="border-top:1px solid #f3d6c4;margin:12px 0"></div>
+<div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-weight:600;color:var(--navy)">Estimated maximum family cost</span><b id="pay" style="font:700 34px Fraunces,serif;color:var(--or)">–</b></div>
+<div class="bar" style="margin-top:12px"><i id="pbar" style="width:0"></i></div><p class="src" id="note" style="margin:10px 0 0"></p></div>
+<p class="src" style="margin-top:14px">Illustration only, not an offer of aid. Per the school's published policy, TuitionMAX caps a family's K–8 obligation at no more than 14% of AGI, including ECC siblings of K–8 students. Assistance is based on need and available funds, and families must enroll and provide financial information to the Tuition Assistance Committee. ECC-only families can apply for partial scholarships through several small funds. Fees are not included.</p></div>
+<div class="rv"><span class="eb">How it works</span><h2>Affordability is central to who we are.</h2>
+<ul class="ck"><li>Applications are strictly confidential and handled with dignity and compassion</li><li>Assistance is available for families with children in grades K–8</li><li>GRTWA subscribes to the NAIS principles of fair practice for financial aid</li><li>Tuition covers approximately 70% of the cost of educating each child; giving closes the gap</li></ul>
+<div class="card" style="margin-top:22px"><h3>Get a personalized estimate</h3><span class="sample">Demo form · nothing is sent</span>
+<form class="demo"><div class="row2"><div><label for="ln">Name</label><input id="ln" required autocomplete="name"></div><div><label for="le">Email</label><input id="le" type="email" required autocomplete="email"></div></div>
+<label for="lg">Child's grade next year</label><select id="lg"><option>Infant / Toddler</option><option>Early Childhood</option><option>Kindergarten</option><option>Grades 1–5</option><option>Grades 6–8</option></select>
+<button class="btn p" style="width:100%;margin-top:16px">Request my estimate</button><div class="ok" role="status">Thanks! In the live version, the school's finance office would follow up. (Demo: nothing was sent.)</div></form></div>
+<p class="src" style="margin-top:16px">Questions on affordability: Joe Weiss, Chief Financial Officer, ext 3010. School information: Alyssa Glaubman, Outreach and Engagement Coordinator, ext 3346. Main number 973.584.5530.</p>
+<div class="btns"><a class="btn g" href="https://www.grtwacademy.org/admissions/affordability_tuitionmax" target="_blank" rel="noopener">Official affordability page</a><a class="btn p" href="https://ga-nj.client.renweb.com/oa/?memberid=15873" target="_blank" rel="noopener">Apply</a></div></div></div></section></main>
+<footer class="ft"><div class="w"><div class="cols">
+<div><img src="img/logo.png" alt="Gottesman RTW Academy" style="height:52px;width:auto;margin-bottom:14px"><p>An independent Jewish community day school, nurturing lifelong learners since 1967. Infants through 8th grade.</p><p>146 Dover Chester Road, Randolph, NJ 07869<br><a href="tel:+19735845530">973.584.5530</a> · Fax 973.584.0602</p></div>
+<div><h4>Explore</h4><ul><li><a href="programs.html">Programs</a></li><li><a href="about.html">Our Story</a></li><li><a href="about.html#staff">Faculty &amp; Staff</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+<div><h4>Admissions</h4><ul><li><a href="visit.html">Book a Tour</a></li><li><a class="" href="https://ga-nj.client.renweb.com/oa/?memberid=15873" target="_blank" rel="noopener">Apply Now</a></li><li><a href="tuition.html">Tuition &amp; Affordability</a></li><li><a class="" href="https://ga-nj.client.renweb.com/oa/inquiry.cfm?memberid=15873" target="_blank" rel="noopener">Request Information</a></li></ul></div>
+<div><h4>Community</h4><ul><li><a href="parents.html">Parents Hub</a></li><li><a href="give.html">Give &amp; Pay</a></li><li><a class="" href="https://facebook.com/GRTWANJ" target="_blank" rel="noopener">Facebook</a></li><li><a class="" href="https://www.instagram.com/gottesmanacademy/" target="_blank" rel="noopener">Instagram</a></li></ul></div>
+</div><div class="cr">Demo concept by <a href="https://www.1ststep.ai/" target="_blank" rel="noopener">1stStep.ai</a> · not affiliated with or endorsed by the school · sample data only<br>Content and photos sourced from <a href="https://www.grtwacademy.org/" target="_blank" rel="noopener">grtwacademy.org</a> for this concept.</div></div></footer>
+<script src="js/site.js" defer></script><script>
+const $=i=>document.getElementById(i),f=n=>'$'+Math.round(n).toLocaleString();
+function calc(){const agi=+$('agi').value||0,k=+$('kids').value,e=+$('ecc').value,full=k*(+$('tk8').value||0)+e*(+$('tecc').value||0),cap=agi*.14,pay=Math.min(full,cap);
+$('full').textContent=f(full);$('cap').textContent=f(cap);$('pay').textContent=f(pay);$('pbar').style.width=(full?pay/full*100:0)+'%';
+$('note').textContent=pay<full?'At this income, the 14% cap could reduce sample tuition by '+f(full-pay)+' ('+Math.round((1-pay/full)*100)+'%).':'At this income, the 14% cap is above sample full tuition.'}
+calc();</script></body></html>
