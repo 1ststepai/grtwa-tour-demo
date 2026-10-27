@@ -204,3 +204,21 @@ img{color:transparent}
  .ready .rv:not(.in),.rv{opacity:1!important;transform:none!important;clip-path:none!important}.split .wd>span,.hr{transform:none!important;opacity:1!important}
  .hbg img{transform:none}.mq-track{flex-wrap:wrap;width:auto;justify-content:center}.mq-track figure:nth-child(n+11){display:none}.mq figure:nth-child(even){transform:none}
  ::view-transition-old(root),::view-transition-new(root){animation:none}}
+/* v3 polish: one premium system with the simulation */
+body{font-feature-settings:"ss01","cv11";-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3{text-wrap:balance}p{text-wrap:pretty}
+h1,h2{font-optical-sizing:auto}h3{font-family:Fraunces,serif;font-weight:500;letter-spacing:-.01em}
+.eb{letter-spacing:.14em;font-size:12.5px}
+nav.main a.how{color:#ffcfb8;font-weight:600}nav.main a.how span{font-size:10px;margin-right:2px;vertical-align:1px}
+@media(min-width:1021px){nav.main a{padding:8px 10px;font-size:14.5px}nav.main a.how{border:1px solid rgba(255,179,143,.45);border-radius:999px;margin-left:6px}nav.main a.how:after{display:none}nav.main a.how:hover{background:rgba(255,179,143,.12)}}
+.btn.t{background:transparent;color:#ffd9c7;padding-left:10px;padding-right:10px}.btn.t:hover{color:#fff}.btn.t span{font-size:11px}
+.btn:focus-visible,nav.main a:focus-visible,.card:focus-visible{outline:2px solid var(--or2);outline-offset:3px}
+@media(max-width:760px){
+ .g4.rail{display:flex;grid-template-columns:none;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;margin:0 -20px;padding:4px 20px 18px;scroll-padding:0 20px;scrollbar-width:none}
+ .g4.rail::-webkit-scrollbar{display:none}
+ .g4.rail>.card{flex:0 0 78%;scroll-snap-align:start}
+ .g4.rail>.card.rv,.ready .g4.rail>.card.rv:not(.in){opacity:1;transform:none;transition-delay:0s!important}
+ .card.img:hover{transform:none}
+ .hero .btns .btn.t{width:100%;justify-content:flex-start;padding-left:4px}
+}
+@media(prefers-reduced-motion:reduce){.g4.rail{scroll-behavior:auto}}

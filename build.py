@@ -14,7 +14,7 @@ O='https://www.grtwacademy.org'
 NAV=[('index.html','Home'),('programs.html','Programs'),('tuition.html','Tuition'),('give.html','Give & Pay'),('parents.html','Parents'),('about.html','About'),('contact.html','Contact')]
 def ext(u,t,cls=''):return f'<a class="{cls}" href="{u}" target="_blank" rel="noopener">{t}</a>'
 def page(fn,title,desc,body,extra_css='',extra_js=''):
-    nav=''.join(f'<a href="{u}"{" aria-current=page" if u==fn else ""}>{t}</a>' for u,t in NAV)
+    nav=''.join(f'<a href="{u}"{" aria-current=page" if u==fn else ""}>{t}</a>' for u,t in NAV)+'<a class="how" href="simulation.html"><span aria-hidden="true">▶</span> See how it works</a>'
     return f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><title>{title} · Gottesman RTW Academy (Website concept)</title><meta name="description" content="{desc}">
 <meta name="theme-color" content="#1d2b5c"><link rel="icon" href="img/logo.png">
@@ -54,12 +54,12 @@ pages['index.html']=page('index.html','Home','A concept redesign of the Gottesma
 <span class="eb hr">Jewish community day school · Randolph, NJ · Since 1967</span>
 <h1 class="split">Where every child is known, valued, and <em>celebrated.</em></h1>
 <p class="hr">Gottesman RTW Academy educates children from infants through 8th grade with a challenging dual curriculum and the richness of Jewish values.</p>
-<div class="btns hr"><a class="btn p" href="visit.html">Book a tour</a><a class="btn o" href="programs.html">Explore programs</a></div></div></div>
+<div class="btns hr"><a class="btn p" href="visit.html">Book a tour</a><a class="btn o" href="programs.html">Explore programs</a><a class="btn t" href="simulation.html"><span aria-hidden="true">▶</span> See how it works</a></div></div></div>
 <div class="w"><div class="paths">{pc}</div></div>
 <section><div class="w"><div class="stats rv">
 <div class="stat"><b><span data-count="1967" data-from="1900">1967</span></b><span>Founded as Hebrew Academy of Morris County</span></div>
 <div class="stat"><b>~<span data-count="200">200</span></b><span>Students, infants through 8th grade</span></div>
-<div class="stat"><b><span data-count="22">22</span></b><span>Acre green campus in Randolph</span></div>
+<div class="stat"><b><span data-count="20">20</span>+</b><span>Acres of green campus in Randolph</span></div>
 <div class="stat"><b><span data-count="900">900</span>+</b><span>Graduates in an active alumni community</span></div></div>
 <p class="src" style="text-align:center;margin-top:12px">Figures as published on grtwacademy.org.</p></div></section>
 {MARQ}
@@ -69,7 +69,7 @@ pages['index.html']=page('index.html','Home','A concept redesign of the Gottesma
 <ul class="ck"><li>Dual curriculum: about 60% General Studies, 40% Judaic Studies</li><li>Blue Ribbon from the U.S. Department of Education</li><li>Accredited by NJAIS; member of NAIS and Prizmah</li><li>Full-time licensed social workers for social and emotional support</li><li>After-care for all ages until 6:00 p.m.</li></ul>
 <a class="btn g" href="about.html">Our story →</a></div></div></section>
 <section><div class="w"><div class="hd rv"><span class="eb">Programs</span><h2>A path from first steps to high school.</h2><p>From the infant room to the 8th grade capstone trip to Israel.</p></div>
-<div class="g4">{pcards}</div></div></section>
+<div class="g4 rail" aria-label="Programs">{pcards}</div></div></section>
 <section style="padding-top:0"><div class="w"><div class="band rv"><div><span class="eb" style="color:var(--or2)">Affordability · TuitionMAX</span><h2>A premier Jewish education, within reach.</h2><p>Through GRTWA's Tuition Assistance Program, eligible families will never pay more than 14% of their adjusted gross income toward tuition, no matter how many children are enrolled.</p><div class="btns"><a class="btn p" href="tuition.html">Estimate my cost</a><a class="btn o" href="visit.html">Book a tour</a></div></div><div class="big">14%<small>of AGI, maximum toward tuition</small></div></div></div></section>
 <section class="alt"><div class="w g2"><div class="rv"><span class="eb">A message from the Head of School</span><h2>“From the moment you walk through our doors, we hope you feel what makes GRTWA so special: a true sense of belonging.”</h2><p class="lead">Rav Will Keller, Head of School</p><a class="btn g" href="about.html#head">Read the full welcome →</a></div><div class="ph rv" style="max-width:380px;justify-self:center"><img src="img/rav.jpg" alt="Rabbi Will Keller, Head of School" style="aspect-ratio:3/4" loading="lazy"></div></div></section>
 <section><div class="w"><div class="hd rv"><span class="eb">Coming up at GRTWA</span><h2>What's happening</h2></div><div id="evlist" style="max-width:820px;margin:0 auto" data-limit="3"></div><p style="text-align:center;margin-top:18px"><a class="btn g" href="parents.html">All events &amp; parent resources →</a></p></div></section>
@@ -118,7 +118,7 @@ P+=prog('athletics','Athletics · GRTWA Lions','Participation, sportsmanship, an
 P+=prog('judaic','Judaic Studies & Hebrew','A strong Jewish identity that guides how students learn, lead, and live.','chai.jpg','Students holding an Israeli flag',
  '<p>A solid foundation in Hebrew language, sacred text study (Torah, Prophets/Tanach), and the culture, history, traditions, and practices of the Jewish people.</p><ul class="ck"><li>Total-immersion Modern Hebrew, with a Mechina program for later starters</li><li>Weekly visits from Israeli Rishonim through the Federation program</li><li>Tefillah, holiday celebrations, and lifecycle learning</li><li>Character education: tzedakah, empathy, fairness, and Tikkun Olam</li></ul>')
 P+=f'''<section class="prog alt" id="camp"><div class="w g2 rev"><div class="rv"><img src="img/camplogo.jpg" alt="Camp Neshama at GRTWA logo" style="border-radius:24px;background:#fff;box-shadow:var(--sh)" loading="lazy"><div class="ph" style="margin-top:16px"><img src="img/program.jpg" alt="Young children running in the gym" loading="lazy"></div></div>
-<div class="rv"><span class="eb">Summer · Camp Neshama</span><h2>A summer camp bursting with fun and discovery.</h2><div class="chips"><span>Ages 2–5</span><span>June 24 – August 14, 2026</span><span>22-acre campus</span></div>
+<div class="rv"><span class="eb">Summer · Camp Neshama</span><h2>A summer camp bursting with fun and discovery.</h2><div class="chips"><span>Ages 2–5</span><span>June 24 – August 14, 2026</span><span>Over 20 acres of campus</span></div>
 <p>A high-quality summer experience filled with joyful learning, hands-on exploration, and meaningful Jewish moments, blending play, creativity, and experiential Jewish education.</p>
 <div class="btns">{ext(O+"/school_life/camp_neshama/camp_dates_and_rates","Camp dates &amp; rates","btn p")}{ext(O+"/school_life/camp_neshama/meet_our_directors","Meet the directors","btn g")}</div></div></div></section>
 <section><div class="w"><div class="band"><div><h2>See it in person.</h2><p>The best way to know GRTWA is to visit, tour, and observe a classroom.</p></div><div><a class="btn p" href="visit.html">Book a tour</a></div></div></div></section>'''
@@ -211,7 +211,7 @@ pages['about.html']=page('about.html','About & Our Story','The history, mission,
 <div class="rv"><span class="eb">Timeline</span><div class="tline">
 <div><b>1966</b><p>Two Morristown couples, Morty z"l and Beatsy z"l Wertheimer and Charlotte and Alvin z"l Turner, share a vision for a Jewish day school, joined by Michael z"l and Midge z"l Rubenstein.</p></div>
 <div><b>1967</b><p>Hebrew Academy of Morris County (HAMC) is founded.</p></div>
-<div><b>Green campus</b><p>A state-of-the-art green facility on a 22-acre Randolph campus, with solar panels, rain gardens, and flexible, technologically advanced classrooms.</p></div>
+<div><b>Green campus</b><p>A state-of-the-art green facility on a Randolph campus of over 20 acres, with solar panels, rain gardens, and flexible, technologically advanced classrooms.</p></div>
 <div><b>Today</b><p>Renamed Gottesman RTW Academy, honoring the founding families (the Rubensteins, Turners, and Wertheimers) and Paula and Jerry Gottesman, whose $15 million challenge gift provided transformative support.</p></div></div></div></div></section>
 <section class="alt"><div class="w g2"><div class="ph rv"><img src="img/founders.jpg" alt="Archival photo of the school's founders" style="aspect-ratio:auto" loading="lazy"></div><div class="rv"><span class="eb">What's in a name</span><h2>R · T · W</h2><p class="lead">The "RTW" honors the three founding families, the Rubensteins, the Turners, and the Wertheimers, whose vision, dedication, and belief in the power of Jewish education laid the foundation for the vibrant community that exists today.</p></div></div></section>
 <section id="head"><div class="w g2"><div class="rv"><span class="eb">Head of School</span><h2>A welcome from Rav Will Keller</h2>
