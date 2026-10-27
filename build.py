@@ -86,7 +86,7 @@ pages['visit.html']=page('visit.html','Book a Tour','Book a personal tour of Got
 <div class="card rv"><span class="eb">3 · Child visit</span><h3>Meet the team</h3><p class="src">For children entering three-year-olds through 8th grade.</p></div>
 <div class="card rv"><span class="eb">4 · Decision</span><h3>Offer &amp; registration</h3><p class="src">Notification by phone and email; 3 weeks to accept the position and any assistance offer.</p></div></div>
 <p class="src" style="text-align:center;margin-top:18px">Kindergarten eligibility: a child must turn 5 by October 31 of the entry year. At least one parent must be Jewish.</p>
-<div class="btns" style="justify-content:center;margin-top:16px">{ext(APPLY,"Start your application","btn p")}{ext(INQ,"Request information","btn g")}<a class="btn g" href="admissions-workflow.html">How follow-up works →</a></div></div></section>''',
+<div class="btns" style="justify-content:center;margin-top:16px">{ext(APPLY,"Start your application","btn p")}{ext(INQ,"Request information","btn g")}<a class="btn g" href="admissions-workflow.html">How follow-up works →</a><a class="btn g" href="simulation.html">▶ See it in action</a></div></div></section>''',
  extra_css='<link rel="stylesheet" href="css/tour.css">',extra_js='<script src="js/tour.js"></script>')
 
 pages['admissions-workflow.html']=page('admissions-workflow.html','How Follow-up Works','An illustration of how tour confirmations and follow-up could reach families.',phero('Admissions · Follow-up','How follow-up works after a tour is booked.','A look at the confirmations, reminders, and thank-you notes families could receive. Everything on this page is an illustration with fictional sample families.','tour.jpg')+flow+'<section><div class="w" style="text-align:center"><a class="btn p" href="visit.html">← Back to booking a tour</a></div></section>',extra_css='<link rel="stylesheet" href="css/tour.css">',extra_js='<script src="js/tour.js"></script>')
@@ -234,6 +234,8 @@ pages['contact.html']=page('contact.html','Contact','Address, phone, and directi
 <div class="g2" style="gap:12px;margin-top:20px">{ct("General information","Ms Yeneida Colon","Director of Operations","3014")}{ct("Admissions &amp; outreach","Ms Alyssa Glaubman","Admissions and Outreach &amp; Engagement Coordinator","3346")}{ct("Development","Mrs Naomi Bacharach '79","Director of Institutional Advancement","3015")}{ct("Financial information","Mr Joe Weiss","Chief Financial Officer","3010")}</div>
 <p style="margin-top:18px"><a href="about.html#staff">Full faculty &amp; staff directory →</a></p></div>
 <div class="rv"><iframe class="map" title="Map of Gottesman RTW Academy" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=146+Dover+Chester+Rd,+Randolph,+NJ+07869&output=embed"></iframe></div></div></section>''')
+
+pages['simulation.html']=page('simulation.html','See How It Works (Simulation)','An interactive simulation of tour booking and automatic follow-up, using sample data.',phero('Interactive simulation','See how it all works, start to finish.','Book a sample tour, watch the follow-up messages go out on their own, and see what the admissions office sees. Sample data only; nothing is sent.','tour.jpg')+open('parts/sim.html').read(),extra_css='<link rel="stylesheet" href="css/tour.css"><link rel="stylesheet" href="css/sim.css">',extra_js='<script src="js/sim.js"></script>')
 
 for k,v in pages.items():open(k,'w').write(v)
 print('built',list(pages))
