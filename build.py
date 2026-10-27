@@ -235,7 +235,7 @@ pages['contact.html']=page('contact.html','Contact','Address, phone, and directi
 <p style="margin-top:18px"><a href="about.html#staff">Full faculty &amp; staff directory →</a></p></div>
 <div class="rv"><iframe class="map" title="Map of Gottesman RTW Academy" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=146+Dover+Chester+Rd,+Randolph,+NJ+07869&output=embed"></iframe></div></div></section>''')
 
-pages['simulation.html']=page('simulation.html','See How It Works (Simulation)','An interactive simulation of tour booking and automatic follow-up, using sample data.',phero('Interactive simulation','See how it all works, start to finish.','Book a sample tour, watch the follow-up messages go out on their own, and see what the admissions office sees. Sample data only; nothing is sent.','tour.jpg')+open('parts/sim.html').read(),extra_css='<link rel="stylesheet" href="css/tour.css"><link rel="stylesheet" href="css/sim.css">',extra_js='<script src="js/sim.js"></script>')
+pages['simulation.html']=open('parts/sim_v2.html').read()  # standalone cinematic demo
 
 for k,v in pages.items():open(k,'w').write(v)
 print('built',list(pages))

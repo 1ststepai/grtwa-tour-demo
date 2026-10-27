@@ -1,0 +1,20 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow"><title>How a family's first visit becomes an enrollment · Gottesman RTW Academy (Simulation)</title>
+<meta name="description" content="An interactive simulation of tour booking and follow-up for Gottesman RTW Academy, using sample data. Nothing is sent.">
+<meta name="theme-color" content="#111a3d"><link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/sim2.css"></head><body>
+<div class="banner" role="status"><b>Interactive simulation:</b> sample data, nothing is sent.</div>
+<header class="bar"><a class="logo" href="index.html" aria-label="Back to the website concept"><img src="img/logo.png" alt="Gottesman RTW Academy" width="129" height="40"></a>
+<ol class="days" id="days" aria-label="Timeline"><li>Day 0</li><li>Day 1</li><li>Tour day</li><li>+3 days</li><li>Spring</li></ol>
+<button class="staff" id="staffBtn" type="button">Staff view</button></header>
+<main id="main"><div class="stage" id="stage" aria-live="polite"></div></main>
+<div class="dock" id="dock" hidden><p class="cap" id="cap"></p><div class="ctl">
+<button class="ib" id="prev" type="button" aria-label="Previous step">‹</button>
+<button class="play" id="play" type="button" aria-label="Pause guided tour"><span class="pi"></span><span class="pl">Pause</span></button>
+<button class="ib" id="next" type="button" aria-label="Next step">›</button>
+<div class="pips" id="pips"></div></div></div>
+<aside class="drawer" id="drawer" aria-hidden="true" aria-label="Family details"><div class="dh"><div><span class="eb">Family detail · sample</span><h3 id="dname"></h3><p id="dmeta"></p></div><button class="ib" id="dclose" type="button" aria-label="Close">×</button></div><ol class="hist" id="dhist"></ol></aside>
+<div class="scrim" id="scrim"></div>
+<script src="js/sim2.js"></script></body></html>
